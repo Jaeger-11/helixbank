@@ -17,12 +17,12 @@
     --deepblue: rgba(166, 201, 255, 0.5);
     --deepred: rgba(255, 40, 40, 0.6);
     --deepgreen: rgba(0, 217, 178, 1);
-    --fontsmall: clamp(12px, 0.8vw, 5rem);
-    --fontmedium: clamp(14px, 1vw, 7rem);
-    --fontlarge: clamp(16px, 1.2vw, 9rem);
-    --padlittle: clamp(5px, 0.3vw, 35px);
-    --padmedium: clamp(10px, 0.5vw, 50px);
-    --padlarge: clamp(15px, 1vw, 100px);
+    --fontsmall: clamp(16px, 0.8vw, 5rem);
+    --fontmedium: clamp(18px, 1vw, 7rem);
+    --fontlarge: clamp(20px, 1.2vw, 9rem);
+    --padlittle: clamp(0.5rem, 0.3vw, 35px);
+    --padmedium: clamp(1rem, 0.5vw, 50px);
+    --padlarge: clamp(2rem, 1vw, 100px);
     --gap: clamp(0.5rem, 0.5vw, 2rem);
     --gaplarge: clamp(1rem, 1vw, 4rem);
     --radius: clamp(10px, 1vw,50px)
@@ -87,17 +87,30 @@ header{
     background: linear-gradient(205.36deg, rgba(0, 71, 255, 0.2) 1.96%, rgba(0, 81, 255, 0) 52.69%), linear-gradient(196.77deg, rgba(0, 71, 255, 0) 71.08%, rgba(0, 71, 255, 0.2) 98.43%), rgba(88, 88, 88, 0.4);
     border-radius: calc(1.5 * var(--radius));
     padding: var(--padmedium);
-    width: 60%;
+    width: 1181px;
+    height: 634px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(calc(var(--scale) - 0.1));
 }
 main{
     padding: var(--padlarge);
     background: linear-gradient(205.36deg, rgba(0, 71, 255, 0.2) 1.96%, rgba(0, 81, 255, 0) 52.69%), linear-gradient(196.77deg, rgba(0, 71, 255, 0) 71.08%, rgba(0, 71, 255, 0.2) 98.43%), rgba(17, 17, 17, 0.95);
     border: 1px solid rgba(133, 167, 255, 0.3);
     border-radius: var(--radius);  
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sections, .actions{
+    margin-top: var(--gaplarge);
 }
 .sections div, .actions div{
     border-radius: calc(0.5 * var(--radius));
@@ -116,15 +129,17 @@ main{
     margin-top: calc(1.5 * var(--gaplarge));
     display: flex;
     gap: var(--gaplarge);
+    flex: 1;
 }
 .overviewcontent{
     flex: 1;
     display: grid;
+    /* flex-direction: column; */
     grid-template-rows: 1fr 1fr;
 }
 .overviewcarddetails{
-    display: flex;
-    /* grid-template-columns: 1fr 1fr; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: var(--gaplarge);
 }
 .carddetails div{
@@ -145,19 +160,18 @@ main{
     padding: var(--padlittle);
 }
 .card{
-    /* height: 20vh; */
-    width: 15vw;
-    aspect-ratio: 327/186;
     padding: var(--padmedium);
-    margin-top: var(--gap);
+    margin-top: var(--gaplarge);
     background-image: url(images/card.svg);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     flex-direction: column;
+    height: 80%;
     justify-content: space-between;
     padding-right: var(--padlarge);
     border-radius: var(--radius);
+    margin-right: var(--gaplarge);
 }
 .cardbalance{
     font-size: calc(1.3 * var(--fontlarge));
@@ -173,7 +187,6 @@ main{
     display: flex;
     flex-direction: column;
     gap: var(--gap);
-    height: 25vh;
     overflow-y: scroll;
 }
 .pasttransaction{
@@ -189,4 +202,74 @@ main{
 .narrationname{
     color: #578CFF;
     margin-left: var(--padlittle);
+}
+
+@media screen and (max-width: 4000px) {
+    body {
+        --scale: 1.5;
+    }
+}
+
+@media screen and (max-width: 3000px) {
+    body {
+        --scale: 1.4;
+    }
+}
+
+@media screen and (max-width: 2560px) {
+    body {
+        --scale: 1.3;
+    }
+}
+
+@media screen and (max-width: 2100px) {
+    body {
+        --scale: 1.2;
+    }
+}
+
+@media screen and (max-width: 2020px) {
+    body {
+        --scale: 1;
+    }
+}
+
+@media screen and (max-width: 1520px) {
+    body {
+        --scale: 0.9;
+    }
+
+    .vehicleshop>.info {
+        transform: scale(0.7);
+    }
+}
+
+@media screen and (max-width: 1324px) {
+    body {
+        --scale: 0.87;
+    }
+}
+
+@media screen and (max-width: 1124px) {
+    body {
+        --scale: 0.8;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    body {
+        --scale: 0.7;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        --scale: 0.6;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        --scale: 0.5;
+    }
 }
