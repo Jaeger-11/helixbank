@@ -235,7 +235,7 @@ aside{
 .card div span{
     color: #A6C9FF;
 }
-.transactions{
+.overviewtransactions, .transactions{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -247,7 +247,7 @@ aside{
     padding-right: var(--padlittle);
     margin-top: var(--gap);
 }
-.pasttransactions{
+.pasttransactions, .transactionshistory{
     padding: var(--padlittle) 0;
     display: flex;
     flex-direction: column;
@@ -314,6 +314,7 @@ aside{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: var(--gaplarge);
 }
 .transactioncountandsearch p{
     flex: 1;
@@ -326,7 +327,7 @@ aside{
 .searchbox{
     width: 80%;
     display: flex;
-    border-radius: var(--radius);
+    border-radius:calc(0.8 * var(--radius));
     background: rgba(255, 255, 255, 0.02);
 border: 1px solid rgba(255, 255, 255, 0.15);
 box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.03);
@@ -337,7 +338,7 @@ box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.03);
     align-items: center;
     justify-content: center;
     padding: calc(1.5 * var(--padlittle));
-    border-radius: var(--radius);
+    border-radius: calc(0.8 * var(--radius));
 }
 .searchiconbox img{
     width: var(--fontmedium);
