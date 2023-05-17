@@ -271,7 +271,29 @@ aside{
 /* TRANSACTION */
 .transactionstats{
     display: grid;
-    grid-template-columns: repeat(1fr, 4);
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--gap);
+}
+.stat{
+    background: rgba(24, 97, 255, 0.3);
+    border-radius: var(--radius);
+    padding: var(--padlarge);
+}
+.stattitle{
+    margin-bottom: var(--gap);
+    text-transform: capitalize;
+    color: rgba(166, 201, 255, 0.7);
+    text-shadow: 0px 0px 60px rgba(255, 255, 255, 0.15);
+    letter-spacing: 0.03em;
+    font-size: var(--fontmedium);
+}
+.statamount{
+    font-size: var(--fontsmall);
+    font-weight: bold;
+}
+.stat:first-child .statamount{
+    font-size: var(--fontlarge);
+    font-weight: 500;
 }
 
 @media screen and (max-width: 4000px) {

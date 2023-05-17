@@ -32,7 +32,29 @@ links.map((link) => {
     })
 })
 
-// OVERVIEW CARDS
+// HEADER ACCOUNT OWNER
+// NOT YET DONE
+
+// OVERVIEW CARDS DETAILS
+const cardbalance = document.querySelector('.cardbalance');
+const cardnumber = document.querySelector('.cardnumber');
+const pushCardDetails = (balance, number) => {
+    cardbalance.innerHTML = '$' +balance,
+    cardnumber.innerHTML = number
+}
+pushCardDetails('8,000.00', '3456 7456 8976 2345')
+
+// OVERVIEW ACCOUNT DETAILS
+const accountnumber = document.querySelector('.accountnumber');
+const IBAN = document.querySelector('.iban');
+const swiftnumber = document.querySelector('.swiftnumber');
+const pushAccountDetails = (account, swiftnum, iban) => {
+    accountnumber.innerHTML = account;
+    swiftnumber.innerHTML = swiftnum
+    IBAN.innerHTML = iban
+}
+pushAccountDetails('1233 545345 53453', 'HE23HJK2', 'HE23HJK2')
+
 // OVERVIEW TRANSACTIONS
 const transactions = document.querySelector('.pasttransactions');
 let transactionsData = [
@@ -91,18 +113,28 @@ let statistics = [
     },
     {
         title: 'income',
-        amount: '15,250,300,550'
+        amount: '$15,250,300,550'
     },
     {
         title: 'outcome',
-        amount: '18,340,650,000'
+        amount: '$18,340,650,000'
     },
     {
         title: 'earnings',
-        amount: '10,267,890,400'
+        amount: '$10,267,890,400'
     }
 ]
 
 const pushStats = (data) => {
-
+    statscontainer.innerHTML = ''
+    statistics.map((stat) => {
+        const { title, amount } = stat;
+        statscontainer.innerHTML += `
+        <div class="stat">
+            <h3 class="stattitle">${title}</h3>
+            <p class="statamount">${amount}</p>
+        </div>
+        `
+    })
 }
+pushStats();
