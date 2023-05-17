@@ -175,7 +175,7 @@ aside{
 .herocont{
     margin-top: calc(1.5 * var(--gaplarge));
     display: flex;
-    gap: var(--gaplarge);
+    gap: calc(2 * var(--gaplarge));
     height: 85%;
 }
 .overviewcontent, .transactioncontent, .settingcontent{
@@ -266,6 +266,12 @@ aside{
     color: #578CFF;
     margin-left: var(--padlittle);
     font-size: var(--fontmedium);
+}
+
+/* TRANSACTION */
+.transactionstats{
+    display: grid;
+    grid-template-columns: repeat(1fr, 4);
 }
 
 @media screen and (max-width: 4000px) {

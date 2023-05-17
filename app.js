@@ -32,9 +32,9 @@ links.map((link) => {
     })
 })
 
+// OVERVIEW CARDS
 // OVERVIEW TRANSACTIONS
 const transactions = document.querySelector('.pasttransactions');
-
 let transactionsData = [
     {
         accountname: "ricardo gonzalez",
@@ -62,7 +62,6 @@ let transactionsData = [
         inflow: true
     },
 ]
-
 const pushTransactions = (data) => {
     transactions.innerHTML = '';
     data.map((transaction) => {
@@ -80,5 +79,30 @@ const pushTransactions = (data) => {
         `
     })
 }
-
 pushTransactions(transactionsData)
+
+// TRANSACTION 
+const statscontainer = document.querySelector('.transactionstats');
+
+let statistics = [
+    {
+        title: 'transactions',
+        amount: '302'
+    },
+    {
+        title: 'income',
+        amount: '15,250,300,550'
+    },
+    {
+        title: 'outcome',
+        amount: '18,340,650,000'
+    },
+    {
+        title: 'earnings',
+        amount: '10,267,890,400'
+    }
+]
+
+const pushStats = (data) => {
+
+}
