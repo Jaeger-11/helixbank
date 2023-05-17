@@ -119,6 +119,9 @@ header{
     transform: translateX(10vw);
     height: 0;
 }
+.ls{
+    letter-spacing: 0.05em;
+}
 /* CONTAINER STYLES */
 .linecontainer{
     background: linear-gradient(205.36deg, rgba(0, 71, 255, 0.2) 1.96%, rgba(0, 81, 255, 0) 52.69%), linear-gradient(196.77deg, rgba(0, 71, 255, 0) 71.08%, rgba(0, 71, 255, 0.2) 98.43%), rgba(88, 88, 88, 0.4);
@@ -165,6 +168,7 @@ aside{
     font-size: var(--fontmedium);
     text-transform: capitalize;
     padding: var(--padmedium);
+    letter-spacing: 0.05em;
 }
 .sections div{
     background: rgba(166, 201, 255, 0.04);
@@ -269,6 +273,11 @@ aside{
 }
 
 /* TRANSACTION */
+.transactioncontent{
+    display: flex;
+    flex-direction: column;
+    gap: var(--gaplarge);
+}
 .transactionstats{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -290,10 +299,60 @@ aside{
 .statamount{
     font-size: var(--fontsmall);
     font-weight: bold;
+    text-shadow: 0px 0px 60px rgba(255, 255, 255, 0.15);
+    letter-spacing: 0.1em;
 }
 .stat:first-child .statamount{
     font-size: var(--fontlarge);
     font-weight: 500;
+}
+.transnumber{
+    color: rgba(87, 140, 255, 0.5);
+    padding-left: var(--gap);
+}
+.transactioncountandsearch{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.transactioncountandsearch p{
+    flex: 1;
+}
+.transactionsearch{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+.searchbox{
+    width: 80%;
+    display: flex;
+    border-radius: var(--radius);
+    background: rgba(255, 255, 255, 0.02);
+border: 1px solid rgba(255, 255, 255, 0.15);
+box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.03);
+}
+.searchiconbox{
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: calc(1.5 * var(--padlittle));
+    border-radius: var(--radius);
+}
+.searchiconbox img{
+    width: var(--fontmedium);
+}
+#searchtransaction{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: var(--fontsmall);
+    padding-left: var(--padmedium);
+}
+#searchtransaction::placeholder{
+    color: rgba(255, 255, 255, 0.4);
+    font-size: var(--fontsmall);
 }
 
 @media screen and (max-width: 4000px) {
