@@ -4,6 +4,12 @@ const settinglink = document.querySelector('.setting');
 const transactioncontent = document.querySelector('.transactioncontent');
 const overviewcontent = document.querySelector('.overviewcontent');
 const settingcontent = document.querySelector('.settingcontent');
+const withdrawcontent = document.querySelector('.withdrawcontent');
+const depositcontent = document.querySelector('.depositcontent');
+const transfercontent = document.querySelector('.transfercontent');
+const transferlink = document.querySelector('.transfer');
+const depositlink = document.querySelector('.deposit');
+const withdrawlink = document.querySelector('.withdraw');
 
 const links = [
     {
@@ -19,6 +25,20 @@ const links = [
         content: settingcontent
     }
 ]
+const actionlinks = [
+    {
+        tab: withdrawlink,
+        content: withdrawcontent
+    },
+    {
+        tab: depositlink,
+        content: depositcontent
+    },
+    {
+        tab: transferlink,
+        content: transfercontent
+    }
+] 
 
 links.map((link) => {
     link.tab.addEventListener('click', () => {
@@ -31,7 +51,20 @@ links.map((link) => {
         });
     })
 })
-
+actionlinks.map((link) => {
+    link.tab.addEventListener('click', () => {
+        link.content.classList.remove('hidden');
+        let restLinks = actionlinks.filter((i) => i.tab !== link.tab)
+        restLinks.map((i) => {
+            i.content.classList.add('hidden')
+        });
+    })
+})
+const cancelModal = () => {
+    depositcontent.classList.add('hidden');
+    withdrawcontent.classList.add('hidden');
+    transfercontent.classList.add('hidden')
+}
 // HEADER ACCOUNT OWNER
 // NOT YET DONE
 

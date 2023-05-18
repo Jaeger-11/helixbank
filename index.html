@@ -13,7 +13,7 @@
 </head>
 <body>
     <!-- WITHDRAW CONTENT -->
-    <div class="darktransparent">
+    <div class="darktransparent withdrawcontent hidden">
         <div class="modalcontainer">
             <section class="modal">
                 <div>
@@ -28,7 +28,7 @@
                 <div class="modalinputandbuttons">
                     <input type="text" name="withdrawinput" id="withdrawinput">
                     <div class="modalbuttons">
-                        <button class="pointer cancel">CANCEL</button>
+                        <button class="pointer cancel" onclick="cancelModal()">CANCEL</button>
                         <button class="pointer confirm">CONFIRM</button>
                     </div>
                 </div>
@@ -36,7 +36,7 @@
         </div>
     </div>
     <!-- DEPOSIT CONTENT -->
-    <div class="darktransparent">
+    <div class="darktransparent depositcontent hidden">
         <div class="modalcontainer">
             <section class="modal">
                 <div>
@@ -51,7 +51,7 @@
                 <div class="modalinputandbuttons">
                     <input type="text" name="depositinput" id="depositinput">
                     <div class="modalbuttons">
-                        <button class="pointer cancel">CANCEL</button>
+                        <button class="pointer cancel" onclick="cancelModal()">CANCEL</button>
                         <button class="pointer confirm">CONFIRM</button>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
         </div>
     </div>
     <!-- TRANSFER CONTENT -->
-    <div class="darktransparent">
+    <div class="darktransparent transfercontent hidden">
         <div class="modalcontainer">
             <section class="modal">
                 <div>
@@ -74,7 +74,7 @@
                 <div class="modalinputandbuttons">
                     <input type="text" name="transferinput" id="transferinput">
                     <div class="modalbuttons">
-                        <button class="pointer cancel">CANCEL</button>
+                        <button class="pointer cancel" onclick="cancelModal()">CANCEL</button>
                         <button class="pointer confirm">CONFIRM</button>
                     </div>
                 </div>
