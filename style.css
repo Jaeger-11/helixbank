@@ -127,8 +127,8 @@ header{
     background: linear-gradient(205.36deg, rgba(0, 71, 255, 0.2) 1.96%, rgba(0, 81, 255, 0) 52.69%), linear-gradient(196.77deg, rgba(0, 71, 255, 0) 71.08%, rgba(0, 71, 255, 0.2) 98.43%), rgba(88, 88, 88, 0.4);
     border-radius: calc(1.5 * var(--radius));
     padding: var(--padmedium);
-    width: 1181px;
-    height: 634px;
+    width: 1024px;
+    height: 689px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -219,7 +219,7 @@ aside{
     background-size: cover;
     display: flex;
     flex-direction: column;
-    height: 80%;
+    height: 70%;
     width: 80%;
     justify-content: space-between;
     padding-right: var(--padlarge);
@@ -254,14 +254,19 @@ aside{
     gap: var(--gap);
 }
 .pasttransaction{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 2fr 1fr auto;
+    /* justify-content: space-between; */
     padding: var(--padlittle);
     text-transform: capitalize;
     align-items: center;
     background: rgba(255, 255, 255, 0.04);
     border-radius: var(--radius);
     padding-left: var(--padmedium);
+}
+.download{
+    width: max-content;
+    text-align: right;
 }
 .narration{
     font-size: var(--fontmedium);
@@ -286,7 +291,7 @@ aside{
 .stat{
     background: rgba(24, 97, 255, 0.3);
     border-radius: var(--radius);
-    padding: var(--padlarge);
+    padding: var(--padmedium);
 }
 .stattitle{
     margin-bottom: var(--gap);
@@ -348,12 +353,58 @@ box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.03);
     border: none;
     outline: none;
     color: rgba(255, 255, 255, 0.4);
-    font-size: var(--fontsmall);
+    font-size: var(--fontmedium);
     padding-left: var(--padmedium);
 }
-#searchtransaction::placeholder{
+#searchtransaction::placeholder, .changeinput::placeholder{
     color: rgba(255, 255, 255, 0.4);
     font-size: var(--fontsmall);
+    letter-spacing: 0.03em;
+}
+.settingcontent{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+.settingcontent form{
+    margin-top: var(--padmedium);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: fit-content(100);
+    width: 70%;
+}
+.settingcontent button{
+    padding: calc(var(--padlittle)) var(--padlarge);
+    height: 100%;
+    background: linear-gradient(107.93deg, #74A0FF 0%, #235BD5 100%);
+    border-radius: calc(0.8 * var(--radius));
+    color: white;
+    border: none;
+}
+.changeinput{
+    outline: none;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.03);
+    padding: var(--padlittle) var(--padmedium);
+    border-radius: calc(0.8 * var(--radius));
+    margin-right: var(--gap);
+    font-size: var(--fontmedium);
+    color: rgba(255, 255, 255, 0.4);
+    line-height: 100%;
+}
+.flexnotification{
+    display: flex;
+    gap: var(--gap);
+    margin-top: var(--gaplarge);
+}
+.flexnotification img{
+    margin-top: var(--padlittle);
+}
+.flexnotification p{
+    width: 45%;
+    color: rgba(166, 201, 255, 0.5);
+    font-size: var(--fontsmall);
+    line-height: 150%;
 }
 
 @media screen and (max-width: 4000px) {

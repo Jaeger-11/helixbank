@@ -64,7 +64,7 @@ let transactionsData = [
         inflow: true
     },
     {
-        accountname: "ricardo gonzalez",
+        accountname: "James Bond",
         amount: 500,
         inflow: false
     },
@@ -74,7 +74,7 @@ let transactionsData = [
         inflow: true
     },
     {
-        accountname: "ricardo gonzalez",
+        accountname: "Billie Raymond",
         amount: 200,
         inflow: false
     },
@@ -84,7 +84,7 @@ let transactionsData = [
         inflow: true
     },
     {
-        accountname: "ricardo gonzalez",
+        accountname: "TEN Hagg",
         amount: 500,
         inflow: true
     },
@@ -94,7 +94,7 @@ let transactionsData = [
         inflow: true
     },
     {
-        accountname: "ricardo gonzalez",
+        accountname: "rosie gonzalez",
         amount: 500,
         inflow: true
     },
@@ -120,6 +120,7 @@ pushOverviewTransactions(transactionsData)
 
 // TRANSACTION 
 const statscontainer = document.querySelector('.transactionstats');
+const totaltransactions = document.querySelector('.transnumber');
 let statistics = [
     {
         title: 'transactions',
@@ -151,6 +152,10 @@ const pushStats = (data) => {
     })
 }
 pushStats();
+const setTotalTransactions = (data) => {
+    totaltransactions.innerHTML = data
+}
+setTotalTransactions(23456)
 // TRANSACTION HISTORY
 const transactions = document.querySelector('.transactionshistory');
 const pushTransactions = (data) => {
@@ -171,3 +176,11 @@ const pushTransactions = (data) => {
     })
 }
 pushTransactions(transactionsData)
+// SEARCH TRANSACTION
+const transactionsearch = document.querySelector('#searchtransaction');
+transactionsearch.addEventListener('input', () => {
+    let searchvalue = transactionsearch.value
+    if(!searchvalue) pushTransactions(transactionsData)
+    let data = transactionsData.filter((item) => item.accountname.toLowerCase().includes(searchvalue.toLowerCase()));
+    pushTransactions(data)
+})

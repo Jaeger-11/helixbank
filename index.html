@@ -43,7 +43,7 @@
                 <section class="herocont">
                     <aside>
                         <div>
-                            <p class="grey fontsmall ls">SECTIONS</p>
+                            <p class="grey fontsmall ls mediumbold">SECTIONS</p>
                             <section class="sections">
                                 <div class="overview flexsmall pointer">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -67,7 +67,7 @@
                         </div>
 
                         <div>
-                            <p class="grey fontsmall ls">ACTIONS</p>
+                            <p class="grey fontsmall ls mediumbold">ACTIONS</p>
                             <section class="actions">
                                 <div class="deposit flexsmall pointer">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -151,11 +151,11 @@
 
                         <section class="transactions">
                             <div class="transactioncountandsearch">
-                                <p class=" fontsmall ls mediumbold">TRANSACTIONS <span class="transnumber ls mediumbold">12566</span> </p>
+                                <p class=" fontsmall ls mediumbold">TRANSACTIONS <span class="transnumber ls mediumbold"></span> </p>
                                 <div class="transactionsearch">
                                     <div class="searchbox">
                                         <div class="searchiconbox"> <img src="images/searchicon.svg" alt="search icon"> </div>
-                                        <input type="text" name="searchtransaction" id="searchtransaction" placeholder="SEARCH TRANSACTIONS" class="ls">
+                                        <input type="text" name="searchtransaction" id="searchtransaction" placeholder="SEARCH TRANSACTIONS..." class="ls">
                                     </div>
                                 </div>
                             </div>
@@ -170,7 +170,29 @@
 
                     <!-- SETTINGS CONTENT -->
                     <div class="settingcontent hidden">
-                        <p>settings</p>
+                        <section class="settingchangeIBAN">
+                            <p class="grey fontsmall mediumbold ls">CHANGE IBAN</p>
+                            <form>
+                                <input type="text" name="changeiban" id="changeiban" maxlength="10" placeholder="NEW IBAN..." class="changeinput">
+                                <button class="pointer fontmedium">SUBMIT</button>
+                            </form>
+                            <section class="flexnotification">
+                                <div> <img src="images/notification.svg" alt="notification"> </div>
+                                <p>The IBAN has a change cost of $5000 The IBAN always have the prefix “OK” The maximum number of characters is 10</p>
+                            </section>
+                        </section>
+
+                        <section class="settingchangePIN">
+                            <p class="grey fontsmall mediumbold ls">CHANGE PIN</p>
+                            <form>
+                                <input type="text" name="changepin" id="changepin" maxlength="4" placeholder="NEW PIN..." class="changeinput">
+                                <button class="pointer fontmedium">SUBMIT</button>
+                            </form>
+                            <section class="flexnotification">
+                                <div> <img src="images/notification.svg" alt="notification"> </div>
+                                <p>The PIN has a change cost of $1000 The maximum number of character is 4 You can only use numbers</p>
+                            </section>
+                        </section>
                     </div>
                 </section>
             </main>
