@@ -38,6 +38,7 @@
     box-sizing: border-box;
     transition: all 0.3s ease;
     font-weight: 400;
+    outline: none;
 }
 body{
     background: url(images/background.png);
@@ -54,11 +55,77 @@ header{
     justify-content: space-between;
     align-items: center;
 }
+.darktransparent{
+    position: absolute;
+    z-index: 1;
+    background: linear-gradient(0deg, rgba(35, 147, 125, 0.05), rgba(35, 147, 125, 0.05)), rgba(0, 0, 0, 0.65);
+}
+.chooseamount{
+    color: rgba(255, 255, 255, 0.45);
+}
+.modalcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    /* background-repeat: no-repeat;
+    background: url(images/bottomcenter.svg) bottom center, url(images/topcenter.svg)  top center ;
+    background-size: contain contain; */
+}
+.modal{
+    display: flex;
+    justify-content: center;
+    gap: var(--gaplarge);
+    flex-direction: column;
+    text-align: center;
+    padding: var(--padlarge);
+}
+.modal svg{
+    width: calc(2 * var(--fontlarge));
+    height: calc(2 * var(--fontlarge));
+}
+.modal h3{
+    font-size: calc(1.5 * var(--fontlarge));
+    letter-spacing: 0.15em;
+}
+.modalinputandbuttons{
+    width: 60%;
+    margin: auto;
+}
+.modal input{
+    width: 100%;
+    margin-bottom: var(--gap);
+    text-align: center;
+    border-radius: calc(0.5 * var(--radius));
+    border: none;
+    font-size: var(--fontmedium);
+    font-weight: 500;
+}
+.modal button{
+    border-radius: calc(0.75 * var(--radius));
+    padding: calc(1.5 * var(--padlittle));
+    border: none;
+}
+.modalbuttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap);
+}
+.modalbuttons .cancel{
+    background: rgba(166, 201, 255, 0.2);
+    color: white;
+}
+.modalbuttons .confirm{
+    background: linear-gradient(107.93deg, #74A0FF 0%, #235BD5 100%);
+    color: white;
+}
 .escape{
     position: absolute;
     bottom: var(--padlarge);
     right: var(--padlarge);
     font-size: var(--fontsmall);
+    z-index: 2;
 }
 .escape button{
     padding: calc( var(--padlittle));
