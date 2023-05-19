@@ -65,6 +65,13 @@ const cancelModal = () => {
     withdrawcontent.classList.add('hidden');
     transfercontent.classList.add('hidden')
 }
+const confirmModal = () => {
+    linecontainer.classList.add('hidden');
+    pincontainer.classList.remove('hidden');
+    depositcontent.classList.add('hidden');
+    withdrawcontent.classList.add('hidden');
+    transfercontent.classList.add('hidden')
+}
 // HEADER ACCOUNT OWNER
 // NOT YET DONE
 
@@ -219,8 +226,11 @@ transactionsearch.addEventListener('input', () => {
 })
 
 // PIN
-const pinnumberbox = document.querySelector('.pinnumbers')
-const pinnumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 'C', 0, 'OK']
+const pinnumberbox = document.querySelector('.pinnumbers');
+const closepincontainer = document.querySelector('.closepincontainer');
+const pincontainer = document.querySelector('.pincontainer');
+const linecontainer = document.querySelector('.linecontainer')
+const pinnumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 'C', 0, 'OK'];
 
 pinnumbers.map((num) => {
     if( num === 'C' ){
@@ -230,4 +240,9 @@ pinnumbers.map((num) => {
     } else {
         pinnumberbox.innerHTML += `<p class='pinnumber pointer'>${num}</p>`
     }
+})
+
+closepincontainer.addEventListener('click', () => {
+    pincontainer.classList.add('hidden');
+    linecontainer.classList.remove('hidden');
 })

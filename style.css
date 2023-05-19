@@ -229,6 +229,7 @@ header{
     left: 50%;
 }
 .pinbox{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -237,6 +238,13 @@ header{
     border-radius: var(--radius);  
     padding: var(--padlarge);
     background: linear-gradient(205.36deg, rgba(0, 71, 255, 0.2) 1.96%, rgba(0, 81, 255, 0) 52.69%), linear-gradient(196.77deg, rgba(0, 71, 255, 0) 71.08%, rgba(0, 71, 255, 0.2) 98.43%), rgba(17, 17, 17, 0.95);
+}
+.pinbox svg{
+    width: var(--fontlarge);
+    aspect-ratio: 1/1;
+    position: absolute;
+    top: var(--fontlarge);
+    right: var(--fontmedium);
 }
 .pinnumbers{
     display: grid;
