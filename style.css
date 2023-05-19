@@ -99,7 +99,7 @@ header{
     text-align: center;
     border-radius: calc(0.5 * var(--radius));
     border: none;
-    font-size: var(--fontmedium);
+    font-size: var(--fontsmall);
     font-weight: 500;
 }
 .modal button{
@@ -119,6 +119,24 @@ header{
 .modalbuttons .confirm{
     background: linear-gradient(107.93deg, #74A0FF 0%, #235BD5 100%);
     color: white;
+}
+.modalinputandbuttons .transferibanpaste{
+    position: relative;
+    margin-bottom: var(--padlittle);
+}
+.transferibanpaste input{
+    margin-bottom: 0;
+}
+.paste{
+    background: rgba(166, 201, 255, 0.5);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: calc(0.5 * var(--padlittle));
+    right: 0;
+    border-radius: calc(0.5 * var(--radius));
 }
 .escape{
     position: absolute;
@@ -200,6 +218,49 @@ header{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(calc(var(--scale) - 0.1));
+}
+.pincontainer{
+    background: linear-gradient(205.36deg, rgba(0, 71, 255, 0.2) 1.96%, rgba(0, 81, 255, 0) 52.69%), linear-gradient(196.77deg, rgba(0, 71, 255, 0) 71.08%, rgba(0, 71, 255, 0.2) 98.43%), rgba(88, 88, 88, 0.4);
+    border-radius: calc(1.5 * var(--radius));
+    padding: calc(1.5 * var(--padlittle));
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.pinbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gaplarge);
+    border: 1px solid rgba(133, 167, 255, 0.3);
+    border-radius: var(--radius);  
+    padding: var(--padlarge);
+    background: linear-gradient(205.36deg, rgba(0, 71, 255, 0.2) 1.96%, rgba(0, 81, 255, 0) 52.69%), linear-gradient(196.77deg, rgba(0, 71, 255, 0) 71.08%, rgba(0, 71, 255, 0.2) 98.43%), rgba(17, 17, 17, 0.95);
+}
+.pinnumbers{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+}
+.pinnumber{
+    width: calc(2.5 * var(--fontlarge));
+    aspect-ratio: 1/1;
+    font-size: var(--fontmedium);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(140.75deg, rgba(166, 201, 255, 0.15) 1.25%, rgba(0, 0, 0, 0.1035) 75.29%), linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 100%), rgba(166, 201, 255, 0.15);
+    border: 1px solid rgba(166, 201, 255, 0.15);
+    border-radius: var(--radius);
+}
+.pinnumberC{
+    background: linear-gradient(140.75deg, #BD7874 1.25%, #862621 75.29%);
+    border: 1px solid rgba(255, 255, 255, 0.17);
+}
+.pinnumberOK{
+    background: linear-gradient(140.75deg, #7BB487 1.25%, #287438 75.29%);
+border: 1px solid rgba(255, 255, 255, 0.17);
 }
 main{
     padding: var(--padlarge);
@@ -397,7 +458,7 @@ aside{
     justify-content: flex-end;
 }
 .searchbox{
-    width: 80%;
+    width: 85%;
     display: flex;
     border-radius:calc(0.8 * var(--radius));
     background: rgba(255, 255, 255, 0.02);

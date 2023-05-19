@@ -217,3 +217,17 @@ transactionsearch.addEventListener('input', () => {
     let data = transactionsData.filter((item) => item.accountname.toLowerCase().includes(searchvalue.toLowerCase()));
     pushTransactions(data)
 })
+
+// PIN
+const pinnumberbox = document.querySelector('.pinnumbers')
+const pinnumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 'C', 0, 'OK']
+
+pinnumbers.map((num) => {
+    if( num === 'C' ){
+        pinnumberbox.innerHTML += `<p class='pinnumber pinnumberC pointer'>${num}</p>`
+    } else if(num === 'OK'){
+        pinnumberbox.innerHTML += `<p class='pinnumber pinnumberOK pointer'>${num}</p>`
+    } else {
+        pinnumberbox.innerHTML += `<p class='pinnumber pointer'>${num}</p>`
+    }
+})
