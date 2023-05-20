@@ -70,10 +70,25 @@ const confirmModal = () => {
     pincontainer.classList.remove('hidden');
     depositcontent.classList.add('hidden');
     withdrawcontent.classList.add('hidden');
-    transfercontent.classList.add('hidden')
+    transfercontent.classList.add('hidden');
 }
 // HEADER ACCOUNT OWNER
-// NOT YET DONE
+const profilename = document.querySelector('.profilename');
+const profilebalance = document.querySelector('.profilebalance');
+const profileimage = document.querySelector('.profileimage')
+
+let profileData = {
+    name: 'Idris Jack',
+    balance: '$600',
+    profileurl: 'images/profileimage.svg' 
+}
+const setProfileData = (name, balance, url) => {
+    profilename.innerHTML = profileData.name;
+    profilebalance.innerHTML = profileData.balance;
+    profileimage.src = profileData.profileurl
+}
+setProfileData(profileData.name, profileData.balance, profileData.profileurl)
+
 
 // OVERVIEW CARDS DETAILS
 const cardbalance = document.querySelector('.cardbalance');
@@ -240,9 +255,7 @@ changeibansubmit.addEventListener('click', () => {
 
 changepinsubmit.addEventListener('click', () => {
     let newpin = changepin.value
-    if( newpin.length > 0){
-        alert(changepin.value)
-    }
+    console.log(newpin)
 })
 
 // PIN
@@ -260,8 +273,16 @@ pinnumbers.map((num) => {
     } else if(num === 'OK'){
         pinnumberbox.innerHTML += `<p class='pinnumber pinnumberOK pointer'>${num}</p>`
     } else {
-        pinnumberbox.innerHTML += `<p class='pinnumber pointer'>${num}</p>`
+        pinnumberbox.innerHTML += `<p class='pinnumber number pointer'>${num}</p>`
     }
+})
+const numbers = document.querySelectorAll('.number');
+pinposition = 0
+numbers.forEach((number) => {
+    number.addEventListener('click', () => {
+        console.log(number.innerHTML)
+
+    })
 })
 
 closepincontainer.addEventListener('click', () => {
@@ -270,7 +291,6 @@ closepincontainer.addEventListener('click', () => {
 })
 
 pins.forEach((pin, key) => {
-    console.log(pin,key)
         if (key !== 0) {
             pin.addEventListener('click', function () {
             pins[0].focus();
