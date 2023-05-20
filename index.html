@@ -104,7 +104,12 @@
                         <span class="fontsmall grey">BANK</span>
                     </div>
                 </section>
-                <div></div>
+                <form class="pins">
+                    <input type="password" maxlength="1" class="pin"/>
+                    <input type="password" maxlength="1" class="pin"/>
+                    <input type="password" maxlength="1" class="pin"/>
+                    <input type="password" maxlength="1" class="pin"/>
+                </form>
                 <p class="fontsmall grey">Enter your account’s PIN code</p>
                 <section class="pinnumbers">
 
@@ -269,7 +274,7 @@
                             <p class="grey fontsmall mediumbold ls">CHANGE IBAN</p>
                             <form>
                                 <input type="text" name="changeiban" id="changeiban" maxlength="10" placeholder="NEW IBAN..." class="changeinput">
-                                <button class="pointer fontmedium">SUBMIT</button>
+                                <button class="pointer fontmedium" id="changeibansubmit">SUBMIT</button>
                             </form>
                             <section class="flexnotification">
                                 <div> <img src="images/notification.svg" alt="notification"> </div>
@@ -280,8 +285,8 @@
                         <section class="settingchangePIN">
                             <p class="grey fontsmall mediumbold ls">CHANGE PIN</p>
                             <form>
-                                <input type="text" name="changepin" id="changepin" maxlength="4" placeholder="NEW PIN..." class="changeinput">
-                                <button class="pointer fontmedium">SUBMIT</button>
+                                <input type="number" name="changepin" id="changepin" min="1" max="9999" placeholder="NEW PIN..." class="changeinput">
+                                <button class="pointer fontmedium" id="changepinsubmit">SUBMIT</button>
                             </form>
                             <section class="flexnotification">
                                 <div> <img src="images/notification.svg" alt="notification"> </div>

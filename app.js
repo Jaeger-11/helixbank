@@ -225,11 +225,33 @@ transactionsearch.addEventListener('input', () => {
     pushTransactions(data)
 })
 
+// SETTINGS 
+const changeiban = document.querySelector('#changeiban');
+const changeibansubmit = document.querySelector('#changeibansubmit');
+const changepin = document.querySelector('#changepin');
+const changepinsubmit = document.querySelector('#changepinsubmit');
+
+changeibansubmit.addEventListener('click', () => {
+    let newiban = changeiban.value
+    if( newiban.length > 0 ){
+        console.log(changeiban.value)
+    }
+})
+
+changepinsubmit.addEventListener('click', () => {
+    let newpin = changepin.value
+    if( newpin.length > 0){
+        alert(changepin.value)
+    }
+})
+
 // PIN
 const pinnumberbox = document.querySelector('.pinnumbers');
 const closepincontainer = document.querySelector('.closepincontainer');
 const pincontainer = document.querySelector('.pincontainer');
-const linecontainer = document.querySelector('.linecontainer')
+const linecontainer = document.querySelector('.linecontainer');
+const pins = document.querySelectorAll('.pin');
+const clearpins = document.querySelector('.pinnumberC');
 const pinnumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 'C', 0, 'OK'];
 
 pinnumbers.map((num) => {
@@ -246,3 +268,24 @@ closepincontainer.addEventListener('click', () => {
     pincontainer.classList.add('hidden');
     linecontainer.classList.remove('hidden');
 })
+
+pins.forEach((pin, key) => {
+    console.log(pin,key)
+        if (key !== 0) {
+            pin.addEventListener('click', function () {
+            pins[0].focus();
+            });
+        }
+})
+pins.forEach((pin, key) => {
+    pin.addEventListener('keyup', function () {
+        if (pin.value) {
+            if (key === 3) {
+            const userCode = [...pins].map((pin) => pin.value).join('');
+            console.log(userCode)
+            } else {
+            pins[key + 1].focus();
+            }
+        }
+    });
+});

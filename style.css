@@ -9,6 +9,14 @@
     background: #FFFFFF;
     border-radius: 5px;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number]{
+    -moz-appearance: textfield;
+}
 :root{
     --greycolor : rgba(255, 255, 255, 0.65);
     --accentblue : rgba(87, 140, 255, 1);
@@ -269,6 +277,27 @@ header{
 .pinnumberOK{
     background: linear-gradient(140.75deg, #7BB487 1.25%, #287438 75.29%);
 border: 1px solid rgba(255, 255, 255, 0.17);
+}
+.pins{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap);
+}
+.pins input{
+    width: calc(0.5 * var(--fontsmall));
+    height: calc(0.5 * var(--fontsmall));
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 9999%;
+    border: none;
+    outline: none;
+    color: white;
+    text-align: center;
+}
+.pins input[type='password']{
+    font-family: 'Outfit', sans-serif;
+    font-size: calc( 1.5 * var(--fontlarge));
+    margin: auto;
 }
 main{
     padding: var(--padlarge);
