@@ -83,9 +83,9 @@ let profileData = {
     profileurl: 'images/profileimage.svg' 
 }
 const setProfileData = (name, balance, url) => {
-    profilename.innerHTML = profileData.name;
-    profilebalance.innerHTML = profileData.balance;
-    profileimage.src = profileData.profileurl
+    profilename.innerHTML = name;
+    profilebalance.innerHTML = balance;
+    profileimage.src = url
 }
 setProfileData(profileData.name, profileData.balance, profileData.profileurl)
 
@@ -309,3 +309,16 @@ pins.forEach((pin, key) => {
         }
     });
 });
+
+// COPY AND PASTE 
+const copy = document.querySelector('.copy');
+const paste = document.querySelector('.paste');
+const transferiban = document.querySelector('#transferiban');
+let copiedtext = ''
+copy.addEventListener('click',  () => {
+    copiedtext = IBAN.innerHTML
+    console.log(copiedtext);
+})
+paste.addEventListener('click', () => {
+    transferiban.value = copiedtext
+})
