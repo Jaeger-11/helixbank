@@ -262,7 +262,6 @@ changepinsubmit.addEventListener('click', (e) => {
 
 // PIN
 const pinnumberbox = document.querySelector('.pinnumbers');
-const closepincontainer = document.querySelector('.closepincontainer');
 const pincontainer = document.querySelector('.pincontainer');
 const linecontainer = document.querySelector('.linecontainer');
 const pins = document.querySelectorAll('.pin');
@@ -270,7 +269,7 @@ const pinnumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 'C', 0, 'OK'];
 
 pinnumbers.map((num) => {
     if( num === 'C' ){
-        pinnumberbox.innerHTML += `<p class='pinnumber pinnumberC pointer'>${num}</p>`
+        pinnumberbox.innerHTML += `<p class='pinnumber pinnumberC pointer' onclick="clearpin()">${num}</p>`
     } else if(num === 'OK'){
         pinnumberbox.innerHTML += `<p class='pinnumber pinnumberOK pointer'>${num}</p>`
     } else {
@@ -278,44 +277,31 @@ pinnumbers.map((num) => {
     }
 })
 const numbers = document.querySelectorAll('.number');
-const clearpin = document.querySelector('.pinnumberC');
+const pinOK = document.querySelector('.pinnumberOK');
 let pinposition = 0
+let userCode;
 numbers.forEach((number) => {
     number.addEventListener('click', () => {
         if ( pinposition < 4 )
         pins[pinposition].value = number.textContent;
+        userCode = [...pins].map((pin) => pin.value).join('');
         pinposition += 1
     })
 })
-clearpin.addEventListener('click', () => {
+// CLEAR PIN INPUTED
+const clearpin = () => {
     pins.forEach((pin) => pin.value = '')
     pinposition = 0
-})
-closepincontainer.addEventListener('click', () => {
+}
+// CLOSE PIN BOX
+const closepincontainer = () => {
     pincontainer.classList.add('hidden');
     linecontainer.classList.remove('hidden');
+}
+pinOK.addEventListener('click', function () {
+    // CONFIRM PIN
+    closepincontainer();
 })
-
-pins.forEach((pin, key) => {
-        if (key !== 0) {
-            pin.addEventListener('click', function () {
-            pins[0].focus();
-            });
-        }
-})
-pins.forEach((pin, key) => {
-    pin.addEventListener('keyup', function () {
-        if (pin.value) {
-            if (key === 3) {
-            const userCode = [...pins].map((pin) => pin.value).join('');
-            console.log(userCode)
-            } else {
-            pins[key + 1].focus();
-            }
-        }
-    });
-});
-
 
 // COPY AND PASTE 
 const copy = document.querySelector('.copy');
