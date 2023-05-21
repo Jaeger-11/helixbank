@@ -279,12 +279,12 @@ pinnumbers.map((num) => {
 const numbers = document.querySelectorAll('.number');
 const pinOK = document.querySelector('.pinnumberOK');
 let pinposition = 0
-let userCode;
+let userpin;
 numbers.forEach((number) => {
     number.addEventListener('click', () => {
         if ( pinposition < 4 )
         pins[pinposition].value = number.textContent;
-        userCode = [...pins].map((pin) => pin.value).join('');
+        userpin = [...pins].map((pin) => pin.value).join('');
         pinposition += 1
     })
 })
@@ -299,8 +299,10 @@ const closepincontainer = () => {
     linecontainer.classList.remove('hidden');
 }
 pinOK.addEventListener('click', function () {
-    // CONFIRM PIN
-    closepincontainer();
+    if ( userpin.length === 4){
+        // CHECK PIN
+        closepincontainer();
+    }
 })
 
 // COPY AND PASTE 
@@ -315,3 +317,17 @@ copy.addEventListener('click',  () => {
 paste.addEventListener('click', () => {
     transferiban.value = copiedtext
 })
+
+// CONVERTING THE VALUE TO AMOUNTS
+// let updateNumber = function (itemvalue) {
+//     let newValue = Intl.NumberFormat().format(itemvalue.value);
+//     let num = +this.value;
+//     itemvalue.value = newValue;
+//     console.log(num * 2);
+//     };
+
+// document.querySelector('#income').addEventListener("change", updateNumber);
+
+// WITHDRAW
+// const withdrawinput = document.querySelector('.withdrawinput');
+// withdrawinput.addEventListener('change', updateNumber(withdrawinput))

@@ -77,9 +77,9 @@ header{
     justify-content: center;
     width: 100vw;
     height: 100vh;
-    /* background-repeat: no-repeat;
-    background: url(images/bottomcenter.svg) bottom center, url(images/topcenter.svg)  top center ;
-    background-size: contain contain; */
+    background-repeat: no-repeat;
+    background: url(images/bottomcenter.svg) bottom center, url(images/topcenter.svg)  top center, url(images/middlecenter.svg) 50% 50% ;
+    background-size: contain contain 50%;
 }
 .modal{
     display: flex;
