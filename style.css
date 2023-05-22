@@ -80,6 +80,7 @@ header{
     background-repeat: no-repeat;
     background: url(images/bottomcenter.svg) bottom center, url(images/topcenter.svg)  top center, url(images/middlecenter.svg) 50% 50% ;
     background-size: contain contain 50%;
+    overflow: hidden;
 }
 .modal{
     display: flex;
@@ -225,6 +226,7 @@ header{
     position: absolute;
     top: 50%;
     left: 50%;
+    overflow: hidden;
     transform: translate(-50%, -50%) scale(calc(var(--scale) - 0.1));
 }
 .pincontainer{
@@ -301,13 +303,14 @@ border: 1px solid rgba(255, 255, 255, 0.17);
 }
 main{
     padding: var(--padlarge);
-    background: rgba(17, 17, 17, 0.9);
+    background: rgba(17, 17, 17, 0.95);
     border: 1px solid rgba(133, 167, 255, 0.3);
     border-radius: var(--radius);  
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 aside{
     display: flex;
@@ -344,7 +347,7 @@ aside{
 .herocont{
     margin-top: calc(1.5 * var(--gaplarge));
     display: flex;
-    gap: calc(2 * var(--gaplarge));
+    gap: var(--gaplarge);
     height: 85%;
 }
 .overviewcontent, .transactioncontent, .settingcontent{
@@ -410,7 +413,7 @@ aside{
 .transactionsbox{
     overflow-y: scroll;
     padding-right: var(--padlittle);
-    margin-top: var(--gap);
+    margin-top: var(--padlittle);
 }
 .pasttransactions, .transactionshistory{
     padding: var(--padlittle) 0;
@@ -421,7 +424,6 @@ aside{
 .pasttransaction{
     display: grid;
     grid-template-columns: 2fr 1fr auto;
-    /* justify-content: space-between; */
     padding: var(--padlittle);
     text-transform: capitalize;
     align-items: center;
@@ -433,13 +435,9 @@ aside{
     width: max-content;
     text-align: right;
 }
-.narration{
-    font-size: var(--fontmedium);
-}
 .narrationname{
     color: #578CFF;
     margin-left: var(--padlittle);
-    font-size: var(--fontmedium);
 }
 
 /* TRANSACTION */
@@ -540,7 +538,7 @@ box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.03);
 .settingcontent button{
     padding: calc(var(--padlittle)) var(--padlarge);
     height: 100%;
-    background: #235BD5;
+    background:  #235BD5;
     border-radius: calc(0.8 * var(--radius));
     color: white;
     border: none;
@@ -581,11 +579,11 @@ box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.03);
 @media screen and (max-width: 3000px) {
     body {
         --scale: 1.4;
-        --fontsmall: 20px;
+        /* --fontsmall: 20px;
         --fontmedium: 22px
-        --fontlarge: 24px;
+        --fontlarge: 24px; */
     }
-    .fontsmall{
+    /* .fontsmall{
         font-size: 20px;
     }
     .fontmedium{
@@ -593,17 +591,17 @@ box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.03);
     }
     .fontlarge{
         font-size: 24px;
-    }
+    } */
 }
 
 @media screen and (max-width: 2560px) {
     body {
         --scale: 1.3;
-        --fontsmall: 18px;
+        /* --fontsmall: 18px;
         --fontmedium: 20px
-        --fontlarge: 22px;
+        --fontlarge: 22px; */
     }
-    .fontsmall{
+    /* .fontsmall{
         font-size: 18px;
     }
     .fontmedium{
@@ -611,7 +609,7 @@ box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.03);
     }
     .fontlarge{
         font-size: 22px;
-    }
+    } */
 }
 
 @media screen and (max-width: 2100px) {
@@ -623,9 +621,9 @@ box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.03);
 @media screen and (max-width: 2020px) {
     body {
         --scale: 1;
-        --fontsmall: 16px;
+        /* --fontsmall: 16px;
         --fontmedium: 18px
-        --fontlarge: 20px;
+        --fontlarge: 20px; */
     }
 }
 
