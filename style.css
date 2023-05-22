@@ -66,7 +66,7 @@ header{
 .darktransparent{
     position: absolute;
     z-index: 1;
-    background: linear-gradient(0deg, rgba(35, 147, 125, 0.05), rgba(35, 147, 125, 0.05)), rgba(0, 0, 0, 0.65);
+    background: rgba(0, 0, 0, 0.65);
 }
 .chooseamount{
     color: rgba(255, 255, 255, 0.45);
@@ -94,7 +94,7 @@ header{
     height: calc(2 * var(--fontlarge));
 }
 .modal h3{
-    font-size: calc(1.5 * var(--fontlarge));
+    font-size: 32px;
     letter-spacing: 0.15em;
 }
 .modalinputandbuttons{
@@ -170,13 +170,13 @@ header{
     font-weight: 600; 
 }
 .fontsmall{
-    font-size: var(--fontsmall);
+    font-size: 16px;
 }
 .fontmedium{
-    font-size: var(--fontmedium);
+    font-size: 18px;
 }
 .fontlarge{
-    font-size: var(--fontlarge);
+    font-size: 20px;
 }
 .grey{
     color: var(--greycolor);
@@ -385,7 +385,7 @@ aside{
     display: flex;
     flex-direction: column;
     height: 70%;
-    width: 80%;
+    width: 90%;
     justify-content: space-between;
     padding-right: var(--padlarge);
     border-radius: var(--radius);
@@ -581,12 +581,36 @@ box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.03);
 @media screen and (max-width: 3000px) {
     body {
         --scale: 1.4;
+        --fontsmall: 20px;
+        --fontmedium: 22px
+        --fontlarge: 24px;
+    }
+    .fontsmall{
+        font-size: 20px;
+    }
+    .fontmedium{
+        font-size: 22px;
+    }
+    .fontlarge{
+        font-size: 24px;
     }
 }
 
 @media screen and (max-width: 2560px) {
     body {
         --scale: 1.3;
+        --fontsmall: 18px;
+        --fontmedium: 20px
+        --fontlarge: 22px;
+    }
+    .fontsmall{
+        font-size: 18px;
+    }
+    .fontmedium{
+        font-size: 20px;
+    }
+    .fontlarge{
+        font-size: 22px;
     }
 }
 
@@ -599,6 +623,9 @@ box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.03);
 @media screen and (max-width: 2020px) {
     body {
         --scale: 1;
+        --fontsmall: 16px;
+        --fontmedium: 18px
+        --fontlarge: 20px;
     }
 }
 
@@ -606,9 +633,14 @@ box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.03);
     body {
         --scale: 0.9;
     }
-
-    .vehicleshop>.info {
-        transform: scale(0.7);
+    .fontsmall{
+        font-size: 14px;
+    }
+    .fontmedium{
+        font-size: 16px;
+    }
+    .fontlarge{
+        font-size: 18px;
     }
 }
 
