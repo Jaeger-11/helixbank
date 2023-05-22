@@ -318,6 +318,14 @@ paste.addEventListener('click', () => {
     transferiban.value = copiedtext
 })
 
+// ESCAPE KEY BACK
+document.addEventListener('keydown', evt => {
+    if (evt.key === 'Escape') {
+        alert('Escape pressed');
+    }
+});
+
+
 // CONVERTING THE VALUE TO AMOUNTS
 // let updateNumber = function (itemvalue) {
 //     let newValue = Intl.NumberFormat().format(itemvalue.value);
