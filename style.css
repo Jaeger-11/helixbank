@@ -125,7 +125,7 @@ header{
     color: white;
 }
 .modalbuttons .confirm{
-    background: linear-gradient(107.93deg, #74A0FF 0%, #235BD5 100%);
+    background: #235BD5;
     color: white;
 }
 .modalinputandbuttons .transferibanpaste{
@@ -217,7 +217,7 @@ header{
 }
 /* CONTAINER STYLES */
 .linecontainer{
-    background: linear-gradient(205.36deg, rgba(0, 71, 255, 0.2) 1.96%, rgba(0, 81, 255, 0) 52.69%), linear-gradient(196.77deg, rgba(0, 71, 255, 0) 71.08%, rgba(0, 71, 255, 0.2) 98.43%), rgba(88, 88, 88, 0.4);
+    background: rgba(0, 71, 255, 0.2);
     border-radius: calc(1.5 * var(--radius));
     padding: var(--padmedium);
     width: 1024px;
@@ -228,7 +228,7 @@ header{
     transform: translate(-50%, -50%) scale(calc(var(--scale) - 0.1));
 }
 .pincontainer{
-    background: linear-gradient(205.36deg, rgba(0, 71, 255, 0.2) 1.96%, rgba(0, 81, 255, 0) 52.69%), linear-gradient(196.77deg, rgba(0, 71, 255, 0) 71.08%, rgba(0, 71, 255, 0.2) 98.43%), rgba(88, 88, 88, 0.4);
+    background: rgba(0, 71, 255, 0.2);
     border-radius: calc(1.5 * var(--radius));
     padding: calc(1.5 * var(--padlittle));
     transform: translate(-50%, -50%);
@@ -245,14 +245,14 @@ header{
     border: 1px solid rgba(133, 167, 255, 0.3);
     border-radius: var(--radius);  
     padding: var(--padlarge);
-    background: linear-gradient(205.36deg, rgba(0, 71, 255, 0.2) 1.96%, rgba(0, 81, 255, 0) 52.69%), linear-gradient(196.77deg, rgba(0, 71, 255, 0) 71.08%, rgba(0, 71, 255, 0.2) 98.43%), rgba(17, 17, 17, 0.95);
+    background: rgba(17, 17, 17, 0.75);
 }
 .pinbox svg{
     width: var(--fontlarge);
     aspect-ratio: 1/1;
     position: absolute;
-    top: var(--fontlarge);
-    right: var(--fontmedium);
+    top: 1rem;
+    right: 1rem;
 }
 .pinnumbers{
     display: grid;
@@ -260,22 +260,22 @@ header{
     gap: var(--gap);
 }
 .pinnumber{
-    width: calc(2.5 * var(--fontlarge));
+    width: 50px;
     aspect-ratio: 1/1;
     font-size: var(--fontmedium);
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(140.75deg, rgba(166, 201, 255, 0.15) 1.25%, rgba(0, 0, 0, 0.1035) 75.29%), linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 100%), rgba(166, 201, 255, 0.15);
+    background: rgba(0, 0, 0, 0.25);
     border: 1px solid rgba(166, 201, 255, 0.15);
     border-radius: var(--radius);
 }
 .pinnumberC{
-    background: linear-gradient(140.75deg, #BD7874 1.25%, #862621 75.29%);
+    background: #862621;
     border: 1px solid rgba(255, 255, 255, 0.17);
 }
 .pinnumberOK{
-    background: linear-gradient(140.75deg, #7BB487 1.25%, #287438 75.29%);
+    background: rgba(40, 116, 56, 1);
 border: 1px solid rgba(255, 255, 255, 0.17);
 }
 .pins{
@@ -301,7 +301,7 @@ border: 1px solid rgba(255, 255, 255, 0.17);
 }
 main{
     padding: var(--padlarge);
-    background: linear-gradient(205.36deg, rgba(0, 71, 255, 0.2) 1.96%, rgba(0, 81, 255, 0) 52.69%), linear-gradient(196.77deg, rgba(0, 71, 255, 0) 71.08%, rgba(0, 71, 255, 0.2) 98.43%), rgba(17, 17, 17, 0.95);
+    background: rgba(17, 17, 17, 0.9);
     border: 1px solid rgba(133, 167, 255, 0.3);
     border-radius: var(--radius);  
     width: 100%;
@@ -339,7 +339,7 @@ aside{
     background: rgba(166, 201, 255, 0.04);
 }
 .actions div{
-    background: linear-gradient(107.93deg, #74A0FF 0%, #235BD5 100%);
+    background: rgba(35, 91, 212, 1);
 }
 .herocont{
     margin-top: calc(1.5 * var(--gaplarge));
@@ -540,7 +540,7 @@ box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.03);
 .settingcontent button{
     padding: calc(var(--padlittle)) var(--padlarge);
     height: 100%;
-    background: linear-gradient(107.93deg, #74A0FF 0%, #235BD5 100%);
+    background: #235BD5;
     border-radius: calc(0.8 * var(--radius));
     color: white;
     border: none;
