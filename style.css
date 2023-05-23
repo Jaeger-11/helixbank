@@ -109,6 +109,8 @@ header{
     border: none;
     font-size: var(--fontsmall);
     font-weight: 500;
+    line-height: var(--fontsmall);
+    padding: var(--padlittle);
 }
 .modal button{
     border-radius: calc(0.75 * var(--radius));
@@ -124,7 +126,15 @@ header{
     background: rgba(166, 201, 255, 0.2);
     color: white;
 }
+.cancel:hover{
+    color: rgba(255, 255, 255, 0.7);
+    background: rgba(166, 201, 255, 0.4);
+}
 .modalbuttons .confirm{
+    background: rgba(35, 91, 213, 0.849);
+    color: rgba(255, 255, 255, 0.7);
+}
+.confirm:hover{
     background: #235BD5;
     color: white;
 }
@@ -319,6 +329,9 @@ aside{
     border-radius: var(--radius);
     padding: var(--padlittle);
 }
+.logoutdiv:hover{
+    background: rgba(255, 40, 40, 0.30);
+}
 .tabactive{
     background: rgba(166, 201, 255, 0.15) !important;
 }
@@ -338,8 +351,14 @@ aside{
 .sections div{
     background: rgba(166, 201, 255, 0.04);
 }
+.sections div:hover{
+    background: rgba(166, 201, 255, 0.08);
+}
 .actions div{
     background: rgba(35, 91, 212, 1);
+}
+.actions div:hover{
+    background: rgba(35, 91, 212, 0.7);
 }
 .herocont{
     margin-top: calc(1.5 * var(--gaplarge));
@@ -375,6 +394,9 @@ aside{
     background: rgba(90, 122, 235, 0.15);
     border-radius: calc(0.5 * var(--radius));
     padding: var(--padlittle);
+}
+.copy:hover, .download:hover{
+    background: rgba(90, 122, 235, 0.30);
 }
 .card{
     padding: var(--padmedium);
@@ -539,6 +561,10 @@ box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.03);
     color: white;
     border: none;
 }
+.settingcontent button:hover{
+    background:  rgba(35, 91, 213, 0.808);
+    color: rgba(255, 255, 255, 0.753);
+}
 .changeinput{
     outline: none;
     background: rgba(255, 255, 255, 0.02);
@@ -549,7 +575,7 @@ box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.03);
     margin-right: var(--gap);
     font-size: var(--fontmedium);
     color: rgba(255, 255, 255, 0.4);
-    line-height: 100%;
+    line-height: var(--fontmedium);
 }
 .flexnotification{
     display: flex;

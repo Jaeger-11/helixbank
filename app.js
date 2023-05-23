@@ -70,18 +70,15 @@ const cancelModal = () => {
 }
 const confirmWithdraw = () => {
     let amount = withdrawinput.value
-    alert(amount)
     withdrawcontent.classList.add('hidden');
 }
 const confirmDeposit = () => {
     let amount = depositinput.value
-    alert(amount)
     depositcontent.classList.add('hidden');
 }
 const confirmTransfer = () => {
     let ibanvalue = transferiban.value
     let amount = transferinput.value
-    alert(amount + 'iban' + ibanvalue)
     transfercontent.classList.add('hidden');
 }
 // HEADER ACCOUNT OWNER
@@ -347,7 +344,7 @@ paste.addEventListener('click', () => {
 // ESCAPE KEY BACK
 document.addEventListener('keydown', evt => {
     if (evt.key === 'Escape') {
-        alert('Escape pressed');
+
     }
 });
 // LOG OUT
@@ -355,17 +352,3 @@ const logout = () => {
     pincontainer.classList.remove('hidden');
     linecontainer.classList.add('hidden');
 }
-
-// CONVERTING THE VALUE TO AMOUNTS
-// let updateNumber = function (itemvalue) {
-//     let newValue = Intl.NumberFormat().format(itemvalue.value);
-//     let num = +this.value;
-//     itemvalue.value = newValue;
-//     console.log(num * 2);
-//     };
-
-// document.querySelector('#income').addEventListener("change", updateNumber);
-
-// WITHDRAW
-// const withdrawinput = document.querySelector('.withdrawinput');
-// withdrawinput.addEventListener('change', updateNumber(withdrawinput))
