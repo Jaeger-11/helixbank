@@ -28,12 +28,12 @@ input[type=number]{
     --fontsmall: 16px;
     --fontmedium: 18px;
     --fontlarge: 20px;
-    --padlittle: clamp(0.5rem, 0.3vw, 35px);
-    --padmedium: clamp(1rem, 0.5vw, 50px);
-    --padlarge: clamp(2rem, 1vw, 100px);
-    --gap: clamp(0.5rem, 0.5vw, 2rem);
-    --gaplarge: clamp(1rem, 1vw, 4rem);
-    --radius: clamp(10px, 1vw,50px)
+    --padlittle: 0.5rem;
+    --padmedium: 1rem;
+    --padlarge: 2rem;
+    --gap: 0.5rem;
+    --gaplarge: 1rem;
+    --radius: 10px;
 }
 *{
     padding: 0;
@@ -168,13 +168,13 @@ header{
     font-weight: 600; 
 }
 .fontsmall{
-    font-size: 16px;
+    font-size: var(--fontsmall);
 }
 .fontmedium{
-    font-size: 18px;
+    font-size: var(--fontmedium);
 }
 .fontlarge{
-    font-size: 20px;
+    font-size: var(--fontlarge);
 }
 .grey{
     color: var(--greycolor);
@@ -388,8 +388,7 @@ aside{
     width: 90%;
     justify-content: space-between;
     padding-right: var(--padlarge);
-    border-radius: var(--radius);
-    /* margin-right: var(--gaplarge); */
+    border-radius: calc(1.5 * var(--radius));
 }
 .cardbalance{
     font-size: 24px;
@@ -593,20 +592,11 @@ box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.03);
 
 @media screen and (max-width: 2560px) {
     body {
-        --scale: 1.3;
+        --scale: 1.35;
         /* --fontsmall: 18px;
         --fontmedium: 20px
         --fontlarge: 22px; */
     }
-    /* .fontsmall{
-        font-size: 18px;
-    }
-    .fontmedium{
-        font-size: 20px;
-    }
-    .fontlarge{
-        font-size: 22px;
-    } */
 }
 
 @media screen and (max-width: 2100px) {
@@ -615,27 +605,21 @@ box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.03);
     }
 }
 
-@media screen and (max-width: 2020px) {
+@media screen and (max-width: 1920px) {
     body {
-        --scale: 1;
-        /* --fontsmall: 16px;
+        --scale: 1.1;
+        --fontsmall: 16px;
         --fontmedium: 18px
-        --fontlarge: 20px; */
+        --fontlarge: 20px;
     }
 }
 
 @media screen and (max-width: 1520px) {
     body {
         --scale: 0.9;
-    }
-    .fontsmall{
-        font-size: 14px;
-    }
-    .fontmedium{
-        font-size: 16px;
-    }
-    .fontlarge{
-        font-size: 18px;
+        --fontsmall: 14px;
+        --fontmedium: 16px
+        --fontlarge: 18px;
     }
 }
 
