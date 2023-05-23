@@ -26,10 +26,10 @@
                     <h3 class="semibold">WITHDRAW MONEY</h3>
                 </div>
                 <div class="modalinputandbuttons">
-                    <input type="text" name="withdrawinput" id="withdrawinput">
+                    <input type="number" name="withdrawinput" id="withdrawinput">
                     <div class="modalbuttons">
                         <button class="pointer cancel" onclick="cancelModal()">CANCEL</button>
-                        <button class="pointer confirm" onclick="confirmModal()">CONFIRM</button>
+                        <button class="pointer confirm"  onclick="confirmWithdraw()" >CONFIRM</button>
                     </div>
                 </div>
             </section>
@@ -52,7 +52,7 @@
                     <input type="text" name="depositinput" id="depositinput">
                     <div class="modalbuttons">
                         <button class="pointer cancel" onclick="cancelModal()">CANCEL</button>
-                        <button class="pointer confirm" onclick="confirmModal()">CONFIRM</button>
+                        <button class="pointer confirm" onclick="confirmDeposit()">CONFIRM</button>
                     </div>
                 </div>
             </section>
@@ -79,7 +79,7 @@
                     <input type="text" name="transferinput" id="transferinput" placeholder="AMOUNT">
                     <div class="modalbuttons">
                         <button class="pointer cancel" onclick="cancelModal()">CANCEL</button>
-                        <button class="pointer confirm" onclick="confirmModal()">CONFIRM</button>
+                        <button class="pointer confirm" onclick="confirmTransfer()">CONFIRM</button>
                     </div>
                 </div>
             </section>
@@ -92,7 +92,7 @@
             <span class="grey ls fontsmall mediumbold">BACK</span>
         </div>
         <!-- PIN UI CONTAINER -->
-        <section class="pincontainer hidden">
+        <section class="pincontainer">
             <div class="pinbox">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none" class="pointer closepincontainer" onclick="closepincontainer()">
                     <path d="M16.3125 1.6875L1.6875 16.3125M1.6875 1.6875L16.3125 16.3125" stroke="white" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -117,7 +117,7 @@
             </div>
         </section>
         <!-- MAIN BANK DASHBOARD -->
-        <section class="linecontainer">
+        <section class="linecontainer hidden">
             <main >
                 <header>
                     <section class="flexsmall">

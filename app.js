@@ -10,6 +10,9 @@ const transfercontent = document.querySelector('.transfercontent');
 const transferlink = document.querySelector('.transfer');
 const depositlink = document.querySelector('.deposit');
 const withdrawlink = document.querySelector('.withdraw');
+const withdrawinput = document.querySelector('#withdrawinput');
+const depositinput = document.querySelector('#depositinput');
+const transferinput = document.querySelector("#transferinput")
 
 const links = [
     {
@@ -65,11 +68,20 @@ const cancelModal = () => {
     withdrawcontent.classList.add('hidden');
     transfercontent.classList.add('hidden')
 }
-const confirmModal = () => {
-    linecontainer.classList.add('hidden');
-    pincontainer.classList.remove('hidden');
-    depositcontent.classList.add('hidden');
+const confirmWithdraw = () => {
+    let amount = withdrawinput.value
+    alert(amount)
     withdrawcontent.classList.add('hidden');
+}
+const confirmDeposit = () => {
+    let amount = depositinput.value
+    alert(amount)
+    depositcontent.classList.add('hidden');
+}
+const confirmTransfer = () => {
+    let ibanvalue = transferiban.value
+    let amount = transferinput.value
+    alert(amount + 'iban' + ibanvalue)
     transfercontent.classList.add('hidden');
 }
 // HEADER ACCOUNT OWNER
@@ -296,12 +308,12 @@ const clearpin = () => {
 // CLOSE PIN BOX
 const closepincontainer = () => {
     pincontainer.classList.add('hidden');
-    linecontainer.classList.remove('hidden');
 }
 pinOK.addEventListener('click', function () {
     if ( userpin.length === 4){
         // CHECK PIN
-        closepincontainer();
+        pincontainer.classList.add('hidden');
+        linecontainer.classList.remove('hidden');
     }
 })
 
