@@ -26,7 +26,7 @@ input[type=number]{
     --deepred: rgba(255, 40, 40, 0.6);
     --deepgreen: rgba(0, 217, 178, 1);
     --fontsmall: 16px;
-    --fontmedium: 18px
+    --fontmedium: 18px;
     --fontlarge: 20px;
     --padlittle: clamp(0.5rem, 0.3vw, 35px);
     --padmedium: clamp(1rem, 0.5vw, 50px);
@@ -78,7 +78,7 @@ header{
     width: 100vw;
     height: 100vh;
     background-repeat: no-repeat;
-    background: rgba(0, 0, 0, 0.555) bottom center, rgba(0, 0, 0, 0.555) bottom center, rgb(0, 71, 255, 0.65) center;
+    background: rgba(0, 0, 0, 0.75);
     overflow: hidden;
 }
 .modal{
@@ -157,7 +157,6 @@ header{
     color: black;
     font-weight: 600;
     margin-right: var(--gap);
-    font-size: var(--fontsmall);
     border-radius: var(--radius);
     border: 0;
 }
