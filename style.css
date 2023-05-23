@@ -150,7 +150,6 @@ header{
     position: absolute;
     bottom: var(--padlarge);
     right: var(--padlarge);
-    font-size: var(--fontsmall);
     z-index: 2;
 }
 .escape button{
