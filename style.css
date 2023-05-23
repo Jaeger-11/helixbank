@@ -44,7 +44,7 @@ input[type=number]{
     user-select: none; 
     font-family: 'Outfit', sans-serif;
     box-sizing: border-box;
-    transition: all 0.3s ease;
+    transition: all 0.15s ease;
     font-weight: 400;
     outline: none;
 }
@@ -65,7 +65,7 @@ header{
 }
 .darktransparent{
     position: absolute;
-    z-index: 1;
+    z-index: 10;
     background: rgba(0, 0, 0, 0.65);
 }
 .chooseamount{
@@ -78,8 +78,7 @@ header{
     width: 100vw;
     height: 100vh;
     background-repeat: no-repeat;
-    background: url(images/bottomcenter.svg) bottom center, url(images/topcenter.svg)  top center, url(images/middlecenter.svg) 50% 50% ;
-    background-size: contain contain 50%;
+    background: rgba(0, 0, 0, 0.555) bottom center, rgba(0, 0, 0, 0.555) bottom center, rgb(0, 71, 255, 0.65) center;
     overflow: hidden;
 }
 .modal{
@@ -210,8 +209,8 @@ header{
     position: absolute;
     z-index: -100;
     pointer-events: none;
-    transform: translateX(10vw);
-    height: 0;
+    transform: translateY(50vh);
+    color: transparent;
 }
 .ls{
     letter-spacing: 0.05em;
