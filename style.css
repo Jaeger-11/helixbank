@@ -221,6 +221,12 @@ header{
     transform: translateY(50vh);
     color: transparent;
 }
+.modalhidden{
+    opacity: 0;
+    position: absolute;
+    z-index: -100;
+    pointer-events: none;
+}
 .ls{
     letter-spacing: 0.05em;
 }

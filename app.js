@@ -56,30 +56,30 @@ links.map((link) => {
 })
 actionlinks.map((link) => {
     link.tab.addEventListener('click', () => {
-        link.content.classList.remove('hidden');
+        link.content.classList.remove('modalhidden');
         let restLinks = actionlinks.filter((i) => i.tab !== link.tab)
         restLinks.map((i) => {
-            i.content.classList.add('hidden')
+            i.content.classList.add('modalhidden')
         });
     })
 })
 const cancelModal = () => {
-    depositcontent.classList.add('hidden');
-    withdrawcontent.classList.add('hidden');
-    transfercontent.classList.add('hidden')
+    depositcontent.classList.add('modalhidden');
+    withdrawcontent.classList.add('modalhidden');
+    transfercontent.classList.add('modalhidden')
 }
 const confirmWithdraw = () => {
     let amount = withdrawinput.value
-    withdrawcontent.classList.add('hidden');
+    withdrawcontent.classList.add('modalhidden');
 }
 const confirmDeposit = () => {
     let amount = depositinput.value
-    depositcontent.classList.add('hidden');
+    depositcontent.classList.add('modalhidden');
 }
 const confirmTransfer = () => {
     let ibanvalue = transferiban.value
     let amount = transferinput.value
-    transfercontent.classList.add('hidden');
+    transfercontent.classList.add('modalhidden');
 }
 // HEADER ACCOUNT OWNER
 const profilename = document.querySelector('.profilename');
@@ -351,4 +351,5 @@ document.addEventListener('keydown', evt => {
 const logout = () => {
     pincontainer.classList.remove('hidden');
     linecontainer.classList.add('hidden');
+    Events.Call("uiATM", "closeUI");
 }
