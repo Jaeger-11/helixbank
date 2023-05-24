@@ -78,7 +78,8 @@ header{
     width: 100vw;
     height: 100vh;
     background-repeat: no-repeat;
-    background: rgba(0, 0, 0, 0.75);
+    background: url(images/backgroundmodal.png);
+    background-size: cover;
     overflow: hidden;
 }
 .modal{
@@ -600,28 +601,13 @@ box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.03);
 
 @media screen and (max-width: 3000px) {
     body {
-        --scale: 1.4;
-        /* --fontsmall: 20px;
-        --fontmedium: 22px
-        --fontlarge: 24px; */
+        --scale: 1.4;   
     }
-    /* .fontsmall{
-        font-size: 20px;
-    }
-    .fontmedium{
-        font-size: 22px;
-    }
-    .fontlarge{
-        font-size: 24px;
-    } */
 }
 
 @media screen and (max-width: 2560px) {
     body {
         --scale: 1.35;
-        /* --fontsmall: 18px;
-        --fontmedium: 20px
-        --fontlarge: 22px; */
     }
 }
 
