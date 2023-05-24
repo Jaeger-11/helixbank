@@ -161,7 +161,7 @@ header{
     position: absolute;
     bottom: var(--padlarge);
     right: var(--padlarge);
-    z-index: 2;
+    z-index: 200;
 }
 .escape button{
     padding: calc( var(--padlittle));
