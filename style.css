@@ -169,7 +169,7 @@ header{
     font-weight: 600;
     margin-right: var(--gap);
     border-radius: var(--radius);
-    border: 0;
+    border: 0;  
 }
 /* REPEATED STYLES */
 .mediumbold{
@@ -280,13 +280,24 @@ header{
     border: 1px solid rgba(166, 201, 255, 0.15);
     border-radius: var(--radius);
 }
+.pinnumber:hover{
+    background: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.753);
+}
 .pinnumberC{
-    background: #862621;
+    background: rgb(134, 38, 33);
     border: 1px solid rgba(255, 255, 255, 0.17);
+}
+.pinnumberC:hover{
+    background: rgba(134, 38, 33, 0.7);
+    color: rgba(255, 255, 255, 0.753);
 }
 .pinnumberOK{
     background: rgba(40, 116, 56, 1);
 border: 1px solid rgba(255, 255, 255, 0.17);
+}
+.pinnumberOK:hover{
+    background: rgba(40, 116, 56, 0.7);
 }
 .pins{
     display: flex;
