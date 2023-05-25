@@ -170,7 +170,7 @@ let transactionsData = [
         amount: 500,
         inflow: true
     },
-]
+].reverse()
 const pushOverviewTransactions = (data) => {
     overviewtransactions.innerHTML = '';
     data.slice(0, 4).map((transaction) => {
