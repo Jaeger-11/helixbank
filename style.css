@@ -450,7 +450,6 @@ aside{
 .overviewtransactions, .transactions{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     overflow: hidden;
     margin-top: var(--gap);
 }
@@ -596,7 +595,7 @@ box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.03);
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.03);
-    padding: var(--padlittle) var(--padmedium);
+    padding: var(--padmedium);
     border-radius: calc(0.8 * var(--radius));
     margin-right: var(--gap);
     font-size: var(--fontmedium);
