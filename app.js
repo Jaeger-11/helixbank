@@ -349,7 +349,7 @@ document.addEventListener('keydown', evt => {
 });
 // LOG OUT
 const logout = () => {
-    pincontainer.classList.remove('hidden');
+    pincontainer.classList.add('hidden');
     linecontainer.classList.add('hidden');
     Events.Call("uiATM", "closeUI");
 }

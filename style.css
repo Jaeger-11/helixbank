@@ -227,6 +227,14 @@ header{
     z-index: -100;
     pointer-events: none;
 }
+.modalhidden .modal{
+    opacity: 0;
+    position: absolute;
+    z-index: -100;
+    pointer-events: none;
+    transform: translateY(50vh);
+    color: transparent;
+}
 .ls{
     letter-spacing: 0.05em;
 }
